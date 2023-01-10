@@ -1,6 +1,7 @@
 ﻿using DemoStore.Date.Cart;
 using DemoStore.Date.Services;
 using DemoStore.Date.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DemoStore.Controllers
@@ -9,11 +10,13 @@ namespace DemoStore.Controllers
     {
         private readonly IProductsService _productsService;
         private readonly ShoppingCart _shoppingCart;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-        public OrdersController(IProductsService productsService, ShoppingCart shoppingCart)
+        public OrdersController(IProductsService productsService, ShoppingCart shoppingCart, SignInManager<IdentityUser> signInManager)
         {
             _productsService= productsService;
             _shoppingCart= shoppingCart;
+            _signInManager= signInManager;
         }
 
         public IActionResult ShoppingCart()
@@ -53,6 +56,13 @@ namespace DemoStore.Controllers
             }
 
             return RedirectToAction(nameof(ShoppingCart));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Store");
         }
     }
 }

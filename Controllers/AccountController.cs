@@ -34,6 +34,8 @@ namespace DemoStore.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LogInViewModel loginViewModel)
         {
+            loginViewModel.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
             if (!ModelState.IsValid) return View(loginViewModel);
 
             var user = await _userManager.FindByEmailAsync(loginViewModel.EmailAddress);
@@ -135,7 +137,7 @@ namespace DemoStore.Controllers
                     {
                         user = new IdentityUser
                         {
-                            UserName = info.Principal.FindFirstValue(ClaimTypes.Email),
+                            UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
                             Email = info.Principal.FindFirstValue(ClaimTypes.Email)
                         };
 

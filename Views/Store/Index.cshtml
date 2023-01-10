@@ -7,11 +7,11 @@
 <div class="row">
     @foreach (var item in Model)
     {
-        <div class="col-md-4 col-xs-6 border-primary mb-3">
-            <div class="card mb-3" style="max-width : 540px;">
+        <div class="col-md-4 col-xs-6">
+            <div class="card mb-3" style="max-width : 540px; border:none">
                 <div class="row g-0">
-                    <div class="col-md-12">
-                        <div class="card-header text-white bg-info">
+                    <div class="col-md-12" style="text-align:center">
+                        <div class="card-header text-white bg-info" style="width:300px; border-radius:30px; margin:0% 13%">
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Name
@@ -20,10 +20,10 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="@item.ImageURL" width="100%" alt="@item.Name">
+                        <img src="@item.ImageURL" width="100%" alt="@item.Name" style="margin:5% 50%">
                     </div>
-                    <div class="col-md-12">
-                        <div class="card-footer">
+                    <div class="col-md-12" style="text-align:center">
+                        <div class="card-footer" style="background:none; border:none">
                             <p class="card-text">
                                 <a class="btn btn-success text-white" asp-controller="Orders" asp-action="AddItemToShoppingCart" asp-route-id="@item.Id"><i class="bi bi-cart-plus"></i>Add to Cart(Price @item.Price.ToString("c"))</a>
                             </p>

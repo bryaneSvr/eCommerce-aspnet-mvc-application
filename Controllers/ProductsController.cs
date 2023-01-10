@@ -1,6 +1,7 @@
 ﻿using DemoStore.Date;
 using DemoStore.Date.Services;
 using DemoStore.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -10,10 +11,12 @@ namespace DemoStore.Controllers
     public class ProductsController : Controller
     {
         private readonly IProductsService _service;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-        public ProductsController(IProductsService service)
+        public ProductsController(IProductsService service, SignInManager<IdentityUser> signInManager)
         {
             _service = service;    
+            _signInManager = signInManager;
         }
 
         public async Task<IActionResult> Index()
@@ -88,6 +91,13 @@ namespace DemoStore.Controllers
             await _service.DeleteAsync(id);
 
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Store");
         }
     }
 }
