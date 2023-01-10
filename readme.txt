@@ -12,7 +12,20 @@ Steps to Launch the site:
 4. Open the DemoStore.sln In Visual Studio 
 5. Set the following configurations in tool bar
 	a. Solution Configuration : Debug or Release
-	b. Soltion Platform : Any CPU
+	b. Solution Platform : Any CPU
 	c. Profiles : IIS Express
 
-That's it launch the application (ctrl+F5) from Visual Studio 2022 and it should work!
+That's it. launch the application (ctrl+F5) from Visual Studio 2022 and it should work!
+
+
+Login Details : 
+GeneralUser Login  
+1. Admin - Email address : demostoreadmin@gmail.com
+		 - Password : Demostore@1
+2. User  - Email address : demostoreuser@gmail.com
+		 - Password : Demostore@1
+GoogleUser Login  
+1. Admin - Email address : demostoreadmn@gmail.com
+		 - Password : Demostore@1
+2. User  - Email address : demostoreusr@gmail.com
+		 - Password : DemoStoreUser@1
