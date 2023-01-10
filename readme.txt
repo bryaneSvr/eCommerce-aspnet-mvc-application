@@ -15,8 +15,7 @@ Steps to Launch the site:
 	b. Solution Platform : Any CPU
 	c. Profiles : IIS Express
 
-That's it. launch the application (ctrl+F5) from Visual Studio 2022 and it should work!
-
+That's it. Launch the application (ctrl+F5) from Visual Studio 2022 and it should work!
 
 Login Details : 
 GeneralUser Login  
@@ -24,8 +23,7 @@ GeneralUser Login
 		 - Password : Demostore@1
 2. User  - Email address : demostoreuser@gmail.com
 		 - Password : Demostore@1
-GoogleUser Login  
-1. Admin - Email address : demostoreadmn@gmail.com
-		 - Password : Demostore@1
-2. User  - Email address : demostoreusr@gmail.com
-		 - Password : DemoStoreUser@1
+
+Notes:
+1. Have provided some sample Image here for testing : https://github.com/bryaneSvr/eCommerce-aspnet-mvc-application/tree/Images
+2. In case you need to assign roles to user use the AssignRoleToUser.sql script : https://github.com/bryaneSvr/eCommerce-aspnet-mvc-application/tree/master/SQLScripts
