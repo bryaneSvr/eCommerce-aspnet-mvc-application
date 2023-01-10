@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Database_Backup\**" />
+    <Content Remove="Database_Backup\**" />
+    <EmbeddedResource Remove="Database_Backup\**" />
+    <None Remove="Database_Backup\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Views\Shared\_Layout.cshtml~RFb1c3e67.TMP" />
   </ItemGroup>
 
