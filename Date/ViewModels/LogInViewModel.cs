@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.InteropServices;
 
 namespace DemoStore.Date.ViewModels
 {

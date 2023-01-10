@@ -1,10 +1,7 @@
-﻿using DemoStore.Date;
-using DemoStore.Date.Services;
+﻿using DemoStore.Date.Services;
 using DemoStore.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace DemoStore.Controllers
 {

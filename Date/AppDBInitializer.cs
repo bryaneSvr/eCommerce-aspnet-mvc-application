@@ -1,7 +1,6 @@
 ﻿using DemoStore.Date.Static;
 using DemoStore.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
 
 
 namespace DemoStore.Date

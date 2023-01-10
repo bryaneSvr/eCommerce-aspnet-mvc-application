@@ -1,12 +1,9 @@
 using DemoStore.Date;
 using DemoStore.Date.Cart;
 using DemoStore.Date.Services;
-using DemoStore.Date.ViewModels;
-using DemoStore.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 

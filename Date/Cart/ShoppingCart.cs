@@ -1,5 +1,4 @@
-﻿using DemoStore.Migrations;
-using DemoStore.Models;
+﻿using DemoStore.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DemoStore.Date.Cart
